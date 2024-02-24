@@ -1,0 +1,110 @@
+ 
+@import 'custom.scss';
+@import '_globals.scss';
+
+$colors: (
+  White: hsl(0, 0%, 100%),
+  Black: hsl(0, 0%, 0%),
+  Dark Gray: hsl(0, 0%, 55%),
+  Very Dark Gray: hsl(0, 0%, 41%),
+);
+$fallback-colors: (
+  White Black #999999 #5b5b5b
+);
+
+@mixin background($url,$position:auto,$size:auto,$repeat:no-repeat,$fixed:fixed,$color:white){
+    background: url($url) $position/$size $repeat $fixed $color; 
+}
+@mixin font-color($color, $fallback-color) {
+  color: $fallback-color;
+  color: $color;
+}
+
+@mixin bg-color($color, $fallback-color) {
+  background-color: $fallback-color;
+  background-color: $color;
+}
+
+
+@mixin border-radius($radius...) {
+  border-radius: $radius;
+}
+@mixin margin($args...) {
+  margin: $args;
+}
+@mixin padding($args...) {
+  padding: $args;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  @include bg-color(map-get($colors,Very Dark Gray),nth($fallback-colors,4));
+  font: {
+     //15 px.
+     size: 93.8%; 
+     weight: $font_weight-normal;
+  }
+}
+
+#header{
+  width: $container__form-xs;
+  @include margin(5px auto);  
+  
+    
+  @include media-breakpoint-up(xxl){
+    @include padding(0 150px);
+    width:$container__form-xxl;
+
+    
+  }
+}
+
+#main{
+  width:$container__form-xs;
+  @include bg-color(map-get($colors,white),nth($fallback-colors,1));
+  @include margin(0 auto);
+  @include padding(25px 0);
+  font: {
+     size: 1.2rem;
+  }
+    
+  
+  @include media-breakpoint-up(xxl){
+     width: $container__form-xxl;
+     @include padding(150px);
+   
+  }
+  
+}
+
+#main-footer{
+  width:$container__form-xs;
+  @include padding(50px 15px);
+  @include margin(5px auto);
+  @include bg-color(map-get($colors,black),nth($fallback-colors,2));
+  @include font-color(map-get($colors,White),nth($fallback-colors,1));
+  
+  
+  @include media-breakpoint-up(xxl){
+    @include padding(150px);
+    width: $container__form-xxl;
+  }
+}
+
+#bottom-footer {
+.attribution {
+  font-size: $font_size-8;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+}
+
