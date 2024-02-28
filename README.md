@@ -38,13 +38,15 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### What I learned
 
--I could use either the img element and the srcset attribute for the image, but I went with just the img element and the Bootstrap class img-fluid.
+- I could use either the img element and the srcset attribute for the image, but I went with just the img element and the Bootstrap class img-fluid.
 
 - I could have used Boostrap card classes for the entire page, meaning including the lists. But I opeted not to use the Boostrap classes  list-group and list-group-item for better visual look that matches the design.
 
--I found a helpful site to help calculate image aspect-ratio 
+- I found a helpful site to help calculate image aspect-ratio 
 
--And I discovered the use of ul::mark to make it easier to style list-style bullets.
+- And I discovered the use of ul::mark to make it easier to style list-style bullets.
+
+- First time use of `text-wrap:balance;` for headings to make them distribute wording more evenly 
 
 
 ### Continued development
