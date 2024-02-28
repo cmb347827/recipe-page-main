@@ -42,9 +42,20 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 - I could have used Boostrap card classes for the entire page, meaning including the lists. But I opeted not to use the Boostrap classes  list-group and list-group-item for better visual look that matches the design.
 
-- I found a helpful site to help calculate image aspect-ratio 
+- I found a helpful site to help calculate image aspect-ratio and first time use of aspect-ratio:
+   ```
+     img{
+        max-width: 1390px;
+        aspect-ratio: 164/75;
+      }
+   ```
 
-- And I discovered the use of ul::mark to make it easier to style list-style bullets.
+- And I discovered the use of ul::mark to make it easier to style list-style bullets:
+   ```
+     li::marker{
+        @include font-color(map-get($colors,Dark Raspberry),nth($fallback-colors,2));
+     }
+   ```
 
 - First time use of `text-wrap:balance;` for headings to make them distribute wording more evenly 
 
