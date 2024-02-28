@@ -19,12 +19,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![screenshot](./images/screenshot.PNG "screenshot")
+![screenshot](./assets/images/screenshot.PNG "screenshot")
 
 ### Links
 
-- Solution URL: [Github]()
-- Live Site URL: [Live Github]()
+- Solution URL: [Github](https://github.com/cmb347827/recipe-page-main)
+- Live Site URL: [Live Github](https://cmb347827.github.io/recipe-page-main/)
 
 ## My process
 
@@ -38,9 +38,13 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### What I learned
 
--img srcset vs img-fluid 
-- boostrap card classes for entire page, no list-group list-group-item for better visual look
--ratio buddy
+-I could use either the img element and the srcset attribute for the image, but I went with just the img element and the Bootstrap class img-fluid.
+
+- I could have used Boostrap card classes for the entire page, meaning including the lists. But I opeted not to use the Boostrap classes  list-group and list-group-item for better visual look that matches the design.
+
+-I found a helpful site to help calculate image aspect-ratio 
+
+-And I discovered the use of ul::mark to make it easier to style list-style bullets.
 
 
 ### Continued development
