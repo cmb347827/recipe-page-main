@@ -3,13 +3,17 @@
 @import '_globals.scss';
 
 $colors: (
+  Nutmeg: hsl(14, 45%, 36%),
+  Dark Raspberry: hsl(332, 51%, 32%),
   White: hsl(0, 0%, 100%),
-  Black: hsl(0, 0%, 0%),
-  Dark Gray: hsl(0, 0%, 55%),
-  Very Dark Gray: hsl(0, 0%, 41%),
+  Rose White: hsl(330, 100%, 98%),
+  Eggshell: hsl(30, 54%, 90%),
+  Light Grey: hsl(30, 18%, 87%),
+  Wenge Brown: hsl(30, 10%, 34%),
+  Dark Charcoal: hsl(24, 5%, 18%),
 );
 $fallback-colors: (
-  White Black #999999 #5b5b5b
+  Brown #7f1734 white snow #f4f0ec lightgray #8b8386 black
 );
 
 @mixin background($url,$position:auto,$size:auto,$repeat:no-repeat,$fixed:fixed,$color:white){
@@ -42,60 +46,123 @@ $fallback-colors: (
   box-sizing: border-box;
 }
 
+html,body{
+  @include bg-color(map-get($colors,Rose White),nth($fallback-colors,4));
+}
 
-html,
 body {
-  @include bg-color(map-get($colors,Very Dark Gray),nth($fallback-colors,4));
+  @include font-color(map-get($colors,Dark Charcoal),nth($fallback-colors,8));
   font: {
-     //15 px.
-     size: 93.8%; 
+     size: 100%; 
      weight: $font_weight-normal;
+     style:normal;
+     family: "Young Serif", serif;
   }
 }
-
-#header{
-  width: $container__form-xs;
-  @include margin(5px auto);  
-  
-    
-  @include media-breakpoint-up(xxl){
-    @include padding(0 150px);
-    width:$container__form-xxl;
-
-    
-  }
+.outfit{
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.outfit-400 {
+  @extend .outfit;
+  font-weight: 400;
+}
+.outfit-600 {
+  @extend .outfit;
+  font-weight: 600;
+}
+.outfit-700 {
+  @extend .outfit;
+  font-weight: 700;
 }
 
-#main{
-  width:$container__form-xs;
-  @include bg-color(map-get($colors,white),nth($fallback-colors,1));
-  @include margin(0 auto);
-  @include padding(25px 0);
-  font: {
-     size: 1.2rem;
-  }
+.card{
     
-  
-  @include media-breakpoint-up(xxl){
-     width: $container__form-xxl;
-     @include padding(150px);
-   
-  }
-  
-}
+    width: $container__form-xs;
+    @include bg-color(map-get($colors,Very Dark Eggshell),nth($fallback-colors,5));
+    @include margin(25px auto);
+    @include padding(25px);
 
-#main-footer{
-  width:$container__form-xs;
-  @include padding(50px 15px);
-  @include margin(5px auto);
-  @include bg-color(map-get($colors,black),nth($fallback-colors,2));
-  @include font-color(map-get($colors,White),nth($fallback-colors,1));
-  
-  
-  @include media-breakpoint-up(xxl){
-    @include padding(150px);
-    width: $container__form-xxl;
-  }
+    #header{
+      @include bg-color(map-get($colors,Very Dark Eggshell),nth($fallback-colors,5));
+      img{
+        display:block;
+        @include margin(15px auto);
+        @include border-radius(18px);
+        @include media-breakpoint-up(xxl){
+          img{
+            max-width: 1390px;
+            aspect-ratio: 164/75;
+          }
+        }
+      }
+      h1{
+        text-wrap:balance;
+      }
+      @include media-breakpoint-up(xxl){
+          h1{
+            font-size: 3.1em;
+          }
+      }
+      
+    }
+
+    #main{
+      @include bg-color(map-get($colors,Very Dark Eggshell),nth($fallback-colors,5));
+      section{
+        @include padding(5px);
+        h2{
+          text-wrap:balance;
+        }
+        li{
+          @include margin(5px);
+          @include media-breakpoint-up(xxl){
+            @include margin(10px);
+          }
+        }
+        li::marker,.color-nutmeg{
+          @include font-color(map-get($colors,Nutmeg),nth($fallback-colors,1));
+        }
+        .border-bottom{
+           border: 2px solid map-get($colors,Light Grey);
+        }
+        @include media-breakpoint-up(xxl){
+           @include padding(10px);
+        }
+      }
+      section:first-of-type{
+          @include padding(15px);
+          @include border-radius(15px);
+          h2:first-of-type{
+            font-size: 1.2em;
+            @include font-color(map-get($colors,Dark Raspberry),nth($fallback-colors,2));
+            @include media-breakpoint-up(xxl){
+              font-size: 1.5em;
+            }
+          }
+          li::marker{
+            @include font-color(map-get($colors,Dark Raspberry),nth($fallback-colors,2));
+          }
+          @include media-breakpoint-up(xxl){
+            @include padding(25px);
+          }
+      }
+      
+      h2:not(first-of-type){
+        @include font-color(map-get($colors,Nutmeg),nth($fallback-colors,1));
+        font-size: 2.2em;
+        @include media-breakpoint-up(xxl){
+           font-size:2.4em;
+        }
+      }
+      .rose-background{
+        @include bg-color(map-get($colors,Rose White),nth($fallback-colors,4));
+      }
+    }
+    @include media-breakpoint-up(xxl){
+      width: $container__form-xxl;
+    }
 }
 
 #bottom-footer {

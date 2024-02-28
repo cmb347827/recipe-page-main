@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/yxgKFKLM/favicon-32x32.png">
   <link rel='stylesheet' href='recipe-page-main.css' type='text/css'>
   <title>Frontend Mentor | Recipe page</title>
@@ -12,99 +17,99 @@
 </head>
 <body>
     <div class="card">
-      <header id='header' class="card-header">
+      <header id='header' class="card-header border-0">
            <!--img
              srcset="./assets/images/image-omelette.jpg 1440w"
              sizes="(max-width: 1440px) 375px"
               src="./assets/images/image-omelette.jpg"
              alt="A finished omelette on a plate" /-->
-          <img src="./assets/images/image-omelette.jpg" alt="" width="1312" height="600"/>
+          <img class="img-fluid" src="./assets/images/image-omelette.jpeg" alt="" width="1312" height="600"/>
           <div class="">
             <h1 class='card-title'>Simple Omelette Recipe</h1>
-            <h2 class="card-title">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-                  to perfection, optionally filled with your choice of cheese, vegetables, or meats.</h2>
+            <p class="card-text p-4">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+                  to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
           </div>
       </header>
-      <main id='main' class='card-body'>
-          <section>      
-            <h3 class="card-title">Preparation time</h3>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Total: Approximately 10 minutes</li>
-              <li class="list-group-item">Preparation: 5 minutes</li>
-              <li class="list-group-item">Cooking: 5 minutes</li>
+      <main id='main' class='card-body border-0'>
+          <section class="rose-background ">      
+            <h2 class="card-title outfit-600">Preparation time</h2>
+            <ul class="rose-background ">
+              <li class="">Total: Approximately 10 minutes</li>
+              <li class="">Preparation: 5 minutes</li>
+              <li class="">Cooking: 5 minutes</li>
             </ul>
           </section>
-          <section>
-            <h3 class="card-title">Ingredients</h3>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">2-3 large eggs</li>
-              <li class="list-group-item">Salt, to taste</li>
-              <li class="list-group-item">Pepper, to taste</li>
-              <li class="list-group-item">1 tablespoon of butter or oil</li>
-              <li class="list-group-item">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          <section class='border-bottom'>
+            <h2 class="card-title outfit-700">Ingredients</h2>
+            <ul class=" ">
+              <li class="">2-3 large eggs</li>
+              <li class="">Salt, to taste</li>
+              <li class="">Pepper, to taste</li>
+              <li class="">1 tablespoon of butter or oil</li>
+              <li class="">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
             </ul>
           </section>
-          <section>
-            <h3 class="card-title">Instructions</h3>
-            <ol class="list-group list-group-flush">
-              <li class="list-group-item">
-                  <em>Beat the eggs</em> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+          <section class="border-bottom">
+            <h2 class="card-title outfit-700">Instructions</h2>
+            <ol class=" ">
+              <li class="">
+                  <strong>Beat the eggs</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
                   You can add a tablespoon of water or milk for a fluffier texture.
               </li>
-              <li class="list-group-item">
-                  <em>Heat the pan</em> Place a non-stick frying pan over medium heat and add butter or oil.
+              <li class="">
+                  <strong>Heat the pan</strong> Place a non-stick frying pan over medium heat and add butter or oil.
               </li>
-              <li class="list-group-item">
-                  <em>Cook the omelette:</em> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+              <li class="">
+                  <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
                   the eggs evenly coat the surface.
               </li>
-              <li class="list-group-item">
-                  <em>Add fillings (optional):</em> When the eggs begin to set at the edges but are still slightly runny in the 
+              <li class="">
+                  <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the 
                   middle, sprinkle your chosen fillings over one half of the omelette.
               </li>
-              <li class="list-group-item">
-                  <em>Fold and serve: </em> the omelette continues to cook, carefully lift one edge and fold it over the 
+              <li class="">
+                  <strong>Fold and serve: </strong> the omelette continues to cook, carefully lift one edge and fold it over the 
                   fillings. Let it cook for another minute, then slide it onto a plate.
               </li>
-              <li class="list-group-item">
-                  <em>Enjoy:</em> Serve hot, with additional salt and pepper if needed.
+              <li class="">
+                  <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
               </li>
             </ol>
           </section>
           <section>
-            <h3 class='card-title'>Nutrition</h3>
+            <h2 class='card-title outfit-700'>Nutrition</h2>
             <p class='card-text'>The table below shows nutritional values per serving without the additional fillings</p>
             <table class="table">
               <tbody>
                 <tr>
                   <td>Calories</td>
-                  <td>277kcal</td>
+                  <td class="color-nutmeg bold">277kcal</td>
                 </tr>
                 <tr>
                   <td>Carbs</td>
-                  <td>0g</td>
+                  <td class="color-nutmeg bold">0g</td>
                 </tr>
                 <tr>
                   <td>Protein</td>
-                  <td>20g</td>
+                  <td class="color-nutmeg bold">20g</td>
                 </tr>
                 <tr>
                   <td>Fat</td>
-                  <td>22g</td>
+                  <td class="color-nutmeg bold">22g</td>
                 </tr>
               </tbody>
             </table>
           </section>
       </main>
     </div>
-    <aside>
-        <footer id='bottom-footer'>
-            <div class="attribution mt-5">
-                <span class='me-2'>Challenge by</span><address><a class='me-2' href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></address>
-                <span class='me-2'>Coded by</span><address><a href="https://www.frontendmentor.io/profile/cmb347827">CMB</a></address>
-            </div>
-        </footer>	
-    </aside>
+    
+    <footer id='bottom-footer'>
+        <div class="attribution mt-5">
+            <span class='me-2'>Challenge by</span><address><a class='me-2' href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></address>
+            <span class='me-2'>Coded by</span><address><a href="https://www.frontendmentor.io/profile/cmb347827">CMB</a></address>
+        </div>
+    </footer>	
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

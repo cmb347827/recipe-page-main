@@ -12905,44 +12905,99 @@ textarea.form-control-lg {
 ::after {
   box-sizing: border-box; }
 
-html,
+html, body {
+  background-color: snow;
+  background-color: #fff5fa; }
+
 body {
-  background-color: #5b5b5b;
-  background-color: dimgray;
-  font-size: 93.8%;
+  color: black;
+  color: #302d2c;
+  font-size: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Young Serif", serif; }
+
+.outfit, .outfit-400, .outfit-600, .outfit-700 {
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto; }
+
+.outfit-400 {
   font-weight: 400; }
 
-#header {
-  width: 375px;
-  margin: 5px auto; }
-  @media (min-width: 1440px) {
-    #header {
-      padding: 0 150px;
-      width: 1440px; } }
+.outfit-600 {
+  font-weight: 600; }
 
-#main {
-  width: 375px;
-  background-color: White;
-  background-color: white;
-  margin: 0 auto;
-  padding: 25px 0;
-  font-size: 1.2rem; }
-  @media (min-width: 1440px) {
-    #main {
-      width: 1440px;
-      padding: 150px; } }
+.outfit-700 {
+  font-weight: 700; }
 
-#main-footer {
+.card {
   width: 375px;
-  padding: 50px 15px;
-  margin: 5px auto;
-  background-color: Black;
-  background-color: black;
-  color: White;
-  color: white; }
+  background-color: #f4f0ec;
+  margin: 25px auto;
+  padding: 25px; }
+  .card #header {
+    background-color: #f4f0ec; }
+    .card #header img {
+      display: block;
+      margin: 15px auto;
+      border-radius: 18px; }
+      @media (min-width: 1440px) {
+        .card #header img img {
+          max-width: 1390px;
+          aspect-ratio: 164/75; } }
+    .card #header h1, .card #header .h1 {
+      text-wrap: balance; }
+    @media (min-width: 1440px) {
+      .card #header h1, .card #header .h1 {
+        font-size: 3.1em; } }
+  .card #main {
+    background-color: #f4f0ec; }
+    .card #main section {
+      padding: 5px; }
+      .card #main section h2, .card #main section .h2 {
+        text-wrap: balance; }
+      .card #main section li {
+        margin: 5px; }
+        @media (min-width: 1440px) {
+          .card #main section li {
+            margin: 10px; } }
+      .card #main section li::marker, .card #main section .color-nutmeg {
+        color: Brown;
+        color: #854632; }
+      .card #main section .border-bottom {
+        border: 2px solid #e4ded8; }
+      @media (min-width: 1440px) {
+        .card #main section {
+          padding: 10px; } }
+    .card #main section:first-of-type {
+      padding: 15px;
+      border-radius: 15px; }
+      .card #main section:first-of-type h2:first-of-type, .card #main section:first-of-type .h2:first-of-type {
+        font-size: 1.2em;
+        color: #7f1734;
+        color: #7b284f; }
+        @media (min-width: 1440px) {
+          .card #main section:first-of-type h2:first-of-type, .card #main section:first-of-type .h2:first-of-type {
+            font-size: 1.5em; } }
+      .card #main section:first-of-type li::marker {
+        color: #7f1734;
+        color: #7b284f; }
+      @media (min-width: 1440px) {
+        .card #main section:first-of-type {
+          padding: 25px; } }
+    .card #main h2:not(first-of-type), .card #main .h2:not(first-of-type) {
+      color: Brown;
+      color: #854632;
+      font-size: 2.2em; }
+      @media (min-width: 1440px) {
+        .card #main h2:not(first-of-type), .card #main .h2:not(first-of-type) {
+          font-size: 2.4em; } }
+    .card #main .rose-background {
+      background-color: snow;
+      background-color: #fff5fa; }
   @media (min-width: 1440px) {
-    #main-footer {
-      padding: 150px;
+    .card {
       width: 1440px; } }
 
 #bottom-footer .attribution {
